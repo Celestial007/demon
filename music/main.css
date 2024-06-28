@@ -1,0 +1,82 @@
+.cover{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(3rem);
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+button{
+background: none;
+border: none;
+font-size: 20px;
+background-color: rgba(0,0,0, 0.4);
+color: pink;
+border-radius: 5px;
+width: 30px;
+height: 30px;
+margin: 5px;
+}
+
+.best{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.songContainer{
+    background-color: rgba(0,0,0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color:white;
+}
+
+
+#seekBar[type='range'] {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 1.5rem;
+    width: 80%;
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+#seekBar[type='range']::-webkit-slider-runnable-track {
+    height: 100%;
+    -webkit-appearance: none;
+}
+#seekBar[type='range']::-webkit-slider-thumb {
+    width: 1.5rem;
+    border: 0.5rem #ffffff solid;
+    -webkit-appearance: none;
+    height: 1.5rem;
+    cursor: pointer;
+    background: var(--iconAccent);
+    border-radius: 20px;
+    transition: 0.1s all;
+    box-shadow: -20rem -15rem 13rem 15rem var(--iconAccent);
+}
