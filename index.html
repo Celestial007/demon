@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f54ce41a64.js" crossorigin="anonymous"></script>
+</head>
+<body onload="playMusic()">
+    <video id="video" class="vd">
+    </video>
+    <div id="card">
+      <div id="card-header">
+        <!-- <img src="banner.png" id="card-banner"> -->
+      </div>
+      <div id="card-content">
+        <img id="card-pfp" src="31a643edf5e2a3a1c4c16c0b34858cd4.png" width="100">
+        <div id="card-status-dnd"></div>
+        <!-- <div id="card-status-idle"></div> -->
+        <!-- <div id="card-status-streaming"></div> -->
+        <!-- <div id="card-status-offline"></div> -->
+        <!-- <div id="card-status-online"></div> -->
+        <div id="card-badges">
+          <img data-tooltip="HypeSquad Bravery" id="card-badge" src="https://static.wikia.nocookie.net/discord/images/b/b5/Bravery.png">
+          <!-- <img data-tooltip="HypeSquad Brilliance" id="card-badge" src="https://static.wikia.nocookie.net/discord/images/b/b8/Brilliance.png"> -->
+          <!-- <img data-tooltip="HypeSquad Balance" id="card-badge" src="https://static.wikia.nocookie.net/discord/images/5/50/Balance.png"> -->
+        </div>
+  
+        <div id="card-user-info">
+          <h4 id="card-username">
+            Maddie <button id="vol"><i class="fa-solid fa-volume-high"></i></button>
+          </h4>
+          <p id="card-user-status">.d.i.s.s.i.d.e.n.t. &#xb7; she/her</p>
+          <h4 id="card-label-aboutme">about me</h4>
+          <p id="card-label-content">
+            - Python, Rust, PHP, C# Coder<br>
+            - Web-designer, GFX designer.<br>
+            - <a href="https://youtube.com" target="_blank">https://youtube.com</a><br>
+          </p>
+          <audio autoplay id="music"></audio>
+          <input id="msg" type="text" placeholder="Message @Maddie">
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

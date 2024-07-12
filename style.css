@@ -1,0 +1,302 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --ui-bg: #202225;
+  --ui-card-bg: #292b2f;
+  --ui-card-head: #000;
+  --ui-card-fore: #18191c;
+  --ui-card-shadow: rgba(0, 0, 0, 0.1);
+
+  --ui-card-status-dnd: #ed4245;
+  --ui-card-status-idle: #faa81a;
+  --ui-card-status-online: #3ba55d;
+  --ui-card-status-offline: #747f8d;
+  --ui-card-status-streaming: #593695;
+}
+
+body {
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe Ui Variable", sans-serif;
+}
+#msg{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 110px;
+    padding-left: 10px;
+    background: #202225;
+    border: none;
+    border-radius: 3px;
+    margin-top: 40px;
+}
+.vd{
+    position: absolute;
+}
+video{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#card {
+  box-shadow: 0 0 20px var(--ui-card-shadow);
+  background: var(--ui-card-bg);
+  border-radius: 10px;
+  min-height: 400px;
+  min-width: 300px;
+  margin: 8% auto;
+  height: 520px;
+  width: 350px;
+  position: relative;
+}
+
+#card #card-header {
+  background: #0055FF;
+  border-radius: 10px 10px 0 0;
+  height: 100px;
+  width: 100%;
+}
+
+#card #card-header #card-banner {
+  border-radius: 10px 10px 0 0;
+  height: 65px;
+  width: 100%;
+}
+
+#card #card-content #card-pfp {
+  border: 6px solid var(--ui-card-bg);
+  border-radius: 50%;
+  margin: -45px 20px;
+  width: 100px;
+  height: 100px;
+  z-index: -9;
+  float: left;
+}
+
+/* Activity and Status */
+#card #card-content #card-status-online {
+  background: var(--ui-card-status-online);
+  border: 6px solid var(--ui-card-bg);
+  border-radius: 50%;
+  margin: 20px -53px;
+  height: 30px;
+  width: 30px;
+  z-index: 999;
+  float: left;
+}
+
+#card #card-content #card-status-dnd {
+  background: var(--ui-card-status-dnd);
+  border: 6px solid var(--ui-card-bg);
+  border-radius: 50%;
+  margin: 20px -53px;
+  height: 30px;
+  width: 30px;
+  z-index: 99;
+  float: left;
+}
+
+#card #card-content #card-status-idle {
+  background: var(--ui-card-status-idle);
+  border: 6px solid var(--ui-card-bg);
+  border-radius: 50%;
+  margin: 20px -53px;
+  height: 30px;
+  width: 30px;
+  z-index: 99;
+  float: left;
+}
+
+#card #card-content #card-status-offline {
+  background: var(--ui-card-bg);
+  border: 6px solid var(--ui-card-bg);
+  border-radius: 50%;
+  margin: 20px -53px;
+  height: 30px;
+  width: 30px;
+  z-index: 99;
+  float: left;
+}
+
+#card #card-content #card-status-streaming {
+  background: var(--ui-card-status-streaming);
+  border: 6px solid var(--ui-card-bg);
+  border-radius: 50%;
+  margin: 20px -53px;
+  height: 30px;
+  width: 30px;
+  z-index: 99;
+  float: left;
+}
+
+/* Activity and Status :before */
+#card #card-content #card-status-streaming:before {
+  content: "";
+  margin: 4px 6px;
+  width: 8px;
+  height: 10px;
+  position: absolute;
+  clip-path: polygon(100% 45%, 0 0, 0 90%);
+  background: var(--ui-card-bg);
+}
+
+#card #card-content #card-status-offline:before {
+  content: "";
+  margin: -1px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  border-color: var(--ui-card-status-offline);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 50%;
+  background: var(--ui-card-bg);
+}
+
+#card #card-content #card-status-dnd:before {
+  content: " ";
+  width: 14px;
+  height: 4px;
+  margin: 6.5px 2px;
+  position: absolute;
+  border-bottom-color: var(--ui-card-bg);
+  border-bottom-width: 0.3em;
+  border-bottom-style: solid;
+  border-radius: 4px;
+}
+
+#card #card-content #card-status-idle:before {
+  content: "";
+  width: 10px;
+  margin: -3px;
+  position: absolute;
+  border-color: var(--ui-card-bg);
+  border-width: 0.5em;
+  border-style: solid;
+  border-radius: 50%;
+  background: var(--ui-card-bg);
+}
+
+/* Profile Badges */
+#card #card-content #card-badges {
+  display: flex;
+  margin: 20px;
+  float: right;
+
+  background: var(--ui-card-fore);
+  border-radius: 7px;
+  padding: 7px;
+}
+
+#card #card-content #card-badges #card-badge {
+  width: 15px;
+  height: 15px;
+  margin: 0px 0px 0px;
+}
+
+#card #card-content #card-badges #card-badge:nth-child(2),
+#card #card-content #card-badges #card-badge:nth-child(3),
+#card #card-content #card-badges #card-badge:nth-child(4),
+#card #card-content #card-badges #card-badge:nth-child(5) {
+  margin: 0px 0px 0px 9px;
+}
+
+#card-user-info {
+  position: absolute;
+  margin: 65px 20px;
+  background: var(--ui-card-fore);
+  padding: 10px 15px;
+  width: 310px;
+  border-radius: 7px;
+  height: 300px;
+}
+
+#card #card-content #card-user-info #card-user-status {
+  color: #d3d4d5;
+  font-size: 13px;
+  padding-bottom: 13px;
+  max-width: 310px;
+  border-bottom-width: 1px;
+  border-bottom-color: #32353b;
+  border-bottom-style: solid;
+}
+
+#card #card-content #card-user-info #card-username {
+  font-weight: 700;
+  font-size: 21px;
+  color: #fff;
+  margin: 0;
+}
+#card #card-content #card-user-info #card-username span{
+    color: white;
+}
+button{
+    background: none;
+    border: none;
+    color: white;
+}
+
+#card #card-content #card-user-info #card-username #card-descrim {
+  color: #b9bbbe;
+}
+
+#card #card-content #card-user-info #card-label-aboutme {
+  margin: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+}
+
+#card #card-content #card-user-info #card-label-note {
+  margin: 5px 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+}
+
+#card #card-content #card-user-info #card-label-content {
+  margin: 10px 0;
+  color: #d3d4d5;
+  font-size: 14px;
+  word-wrap: break-word;
+  max-height: 100px;
+}
+
+#card #card-content #card-user-info #card-label-content a {
+  color: #00a8ec;
+  text-decoration: none;
+}
+
+#card #card-content #card-user-info #card-label-content a:hover {
+  text-decoration: underline;
+}
+
+#card #card-content #card-user-info #card-note-content {
+  font-family: "Segoe UI Variable", sans-serif;
+  background: transparent;
+  word-wrap: break-word;
+  margin: 7px 5px;
+  color: #d3d4d5;
+  font-size: 13px;
+  height: 70px;
+  width: 270px;
+  max-height: 70px;
+  max-width: 270px;
+  resize: none;
+  border: 0;
+  outline: 0;
+}
+
+#card #card-content #card-user-info #card-note-content::-webkit-scrollbar {
+  opacity: 0;
+}
